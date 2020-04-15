@@ -1,0 +1,63 @@
+@font-face {font-family: "MS Gothic"; src: url("./fonts/MS-Gothic/MSGOTHIC.ttf"); 
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+main {  
+    text-align: center;  
+} 
+
+body {
+    background: rgb(80,151,217);
+    background: linear-gradient(0deg, rgba(56,160,197,1) 41%, rgb(231, 94, 238) 92%);
+    background-repeat:no-repeat;
+    background-size:100% 2000px;   
+}
+
+#formulario {
+    height: 100%;
+}
+
+.small-card {
+    font-family: MS Gothic;
+    font-size: large;
+}
+
+.cat-img {
+    max-width: 50%;
+    align-self: center;
+}
+
+#loading {
+    -webkit-animation: rotation 2s infinite linear;
+}
+
+#sugerencia-btn {
+    padding: 0px;
+}
+
+#form-btn {
+    padding: 0px; 
+}
+
+.github-link {
+    background-image: url(./img/github-img.png);
+    background-size: 55px 55px;
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 55px;
+    padding: 0px;
+    float: right;
+}
+
+#github-img {
+    max-width: 100%; 
+}
+
