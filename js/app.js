@@ -46,7 +46,7 @@ button1.onclick =  function() {
 //form
 const button2 = document.querySelector('#form-btn');
 
-button2.addEventListener('click', mostratFormulario());
+button2.addEventListener('click', mostrarFormulario());
 
 function mostrarFormulario() {
     let formulario = document.getElementById('formulario');
