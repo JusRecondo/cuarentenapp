@@ -4,7 +4,7 @@ let actividades;
 
 let xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'https://raw.githubusercontent.com/JusRecondo/data-sample/master/db.json', true);
+xhr.open('GET', './db.json', true);
 xhr.responseType = 'text';
 xhr.send();
 
