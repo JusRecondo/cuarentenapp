@@ -1,5 +1,27 @@
 'use strict';
+//actividades
+let actividades;
 
+let xhr = new XMLHttpRequest();
+
+xhr.open('GET', 'https://raw.githubusercontent.com/JusRecondo/data-sample/master/db.json', true);
+xhr.responseType = 'text';
+xhr.send();
+
+xhr.onload = function() {
+    if(xhr.status === 200) {
+        actividades = JSON.parse(xhr.responseText);
+    }
+}
+
+function mostrarActividad(actividad) {   
+    return `<div class="card-body">
+            <h4 class="card-title">${actividad.nombre}</h4> 
+            <p class="card-text">${actividad.descripcion}</p>
+            -><a href='${actividad.link}' class='card-link text-white' target="_blank">${actividad.link}</a><-</div>`;
+    } 
+ 
+//sorteo    
 const button1 = document.getElementById('sugerencia-btn');
 
 button1.onclick =  function() { 
@@ -13,11 +35,11 @@ button1.onclick =  function() {
    
         
     setTimeout(function(){
-        let sorteo = Math.floor(Math.random() * 20);
-        sugerencia.innerHTML = actividades[sorteo].mostrarActividad();  
+        let sorteo = Math.floor(Math.random() * 27);
+        let actividad = actividades[sorteo];
+        sugerencia.innerHTML = mostrarActividad(actividad);  
     }, 2000)
-    
-   
+       
   ;
 };
 
