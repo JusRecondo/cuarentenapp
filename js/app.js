@@ -44,9 +44,11 @@ button1.onclick =  function() {
 };
 
 //form
-const button2 = document.getElementById('form-btn');
+const button2 = document.querySelector('#form-btn');
 
-button2.onclick = function() {
+button2.addEventListener('click', mostratFormulario());
+
+function mostrarFormulario() {
     let formulario = document.getElementById('formulario');
 
     formulario.classList.toggle('d-none');
